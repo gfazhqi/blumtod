@@ -178,7 +178,7 @@ class BlumTod:
         for i in range(play):
             res = self.http(url_play, headers, "")
             game_id = res.json()["gameId"]
-            self.countdown(30)
+            self.countdown(10)
             point = random.randint(self.MIN_WIN, self.MAX_WIN)
             data = json.dumps({"gameId": game_id, "points": point})
             res = self.http(url_claim, headers, data)
